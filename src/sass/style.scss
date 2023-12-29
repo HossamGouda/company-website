@@ -1,0 +1,360 @@
+@import './projects.scss';
+@import './_variable.scss';
+@import './blog.scss';
+@import './about.scss';
+@import './contact.scss';
+
+@font-face {
+    font-family: "cairoFont";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+
+body {
+    font-family: "cairoFont", 'Cambria, Cochin, Georgia, Times, Times New Roman, serif' !important;
+}
+
+.container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    overflow-x: hidden;
+}
+
+.top-menu {
+    .navbar {
+       font-weight: bold;
+       padding: 0px 100px !important;
+       background-color: #FFF !important;
+       .navbar-nav {
+            li > a {
+                transition-property: background-color;
+                transition-duration: 0.5s;
+
+                &:hover {
+                    color: $main-color !important;
+                    background-color: $custom-color;
+                    border-bottom: 1px solid $main-color;
+                }
+            }
+
+            .active a {
+                color: $main-color !important;
+                border-bottom: 1px solid $main-color;
+            }
+        }
+    }
+}
+
+.carousel-top {
+    .row {
+        display: block !important;
+    }
+
+    .carousel {
+        .carousel-item {
+            img {
+                height: 450px;
+            }
+
+            .overlay {
+                position: absolute;
+                background-color: rgba(65,155,155,0.5);
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                display: flex !important;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 1;
+            }
+        }
+
+        .carousel-indicators {
+            li {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                margin: 20px 5px 0px 0px;
+
+                &.active { 
+                    background-color: $main-color;
+                }
+            }
+        }
+
+        .carousel-caption {
+            h1 {
+                font-weight: bold;
+                color: white;
+                margin-bottom: 50px;
+            }
+
+            h4 {
+                width: 60%;
+                color: $custom-color;
+            }
+        }
+        
+    }
+}
+
+.custom-btn {
+    padding: 10px 20px;
+    color: $main-color !important;
+    border: 1px solid $main-color !important;
+    font-weight: bold !important;
+ 
+    &:hover,
+    &:focus {
+        color: $custom-color !important;
+        background-color: $main-color !important;
+        border: 1px solid $custom-color !important;
+    }
+}
+
+.who-are-we {
+    .custom-paragraph {
+        line-height: 2em;
+    }
+
+    .company-name {
+        color: $main-color;
+    }
+}
+
+.custom-btn-main {
+    padding: 20px;
+    background-color:$main-color !important;
+    color:white;
+    font-weight: bold;
+    width: 250px;
+
+    &:hover {
+        color : #000;
+    }
+}
+
+.latest-projects {
+    background-color: #FFFFCC;
+
+    #latest-company-projects { 
+        width: 80%;  
+
+        .thumbnail2 {
+            position:relative;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+            .caption2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background:rgba(65, 155, 155, 0.5);
+                max-width: 100%;
+                height: 100%;
+                padding: 2%;
+                text-align: center;
+                color:#fff !important;
+                display: none;
+            }
+        
+            .project-category {
+                position: absolute;
+                right: 0px;
+                top: 5%;
+                font-weight: bold;
+                background-color: rgba(240,240, 240, 0.75);
+                padding: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                box-shadow: 0px 5px 20px 0px #202020;
+            }
+    
+        } 
+        
+        a.carousel-control-next {
+            position: absolute;
+            left: -5%;
+            color: #252222;
+            width: 0;
+        }
+
+        a.carousel-control-prev {
+            position: absolute;
+            right: -6%;
+            color: #252222;
+            width: 0;
+        }
+    }
+}
+
+.project-details {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.said-about-company {
+    .custom-img {
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    .custom-paragraph {
+        line-height: 2em;
+    }
+
+    .fa-angle-right,
+    .fa-angle-left {
+        color: #252222;
+    }
+
+    a.carousel-control-next {
+        position: absolute;
+        left: 7%;
+        width: 0;
+    }
+    
+    a.carousel-control-prev {
+        position: absolute;
+        right: 7%;
+        width: 0;
+    }
+    
+}
+
+.clients {
+    background-color: #419B9B;
+}
+
+.latest-posts {
+    .card-body {
+        width: 90%;
+        border: 1px solid #CCCCCC;
+        border-radius: 5px;
+        position: relative;
+        background-color: white;
+        top: -17px;
+        left: -5%;
+    }
+    .card-title{
+        font-weight: bold;
+        font-size: 18px;
+    }
+    
+    .card-text {
+        font-size: 14px;
+    }
+}
+
+footer {
+    height: 450px;
+    background-color: #393939;
+
+    h2 {
+        color: $custom-color;
+        font-size: 150%;   
+    }
+    
+    .line1 {
+        width: 5%;
+        border-top: 3px solid $custom-color;
+    }
+    
+    #footer-nav-links {
+        a {
+            text-decoration: none;
+            color:#BBBBBB;
+            margin-left: 15px;
+            font-size: 90%;
+
+            &:hover,
+            &:focus {
+                color: $custom-color;
+            }
+        }
+    }
+
+    .line2 {
+         width: 60%;
+         border-top: 3px solid $custom-color;
+    }
+
+    .form {
+        margin-right: 48px;
+        margin-left: 48px;
+
+        input {
+            background-color: #202020;
+            border-radius: 1px;
+            border: 0px;
+
+            &:focus {
+                border-color: $custom-color;
+                box-shadow: 0 0 2px 0 $custom-color;
+                background-color: #202020;
+                color: $custom-color
+            }
+        }  
+    }
+
+    .btn-light {
+        &:hover,
+        &:focus {
+            color: $custom-color !important;
+            background-color: #363636 !important;
+            border: 1px solid $custom-color;
+            transition-property: border,color,background-color ;
+            transition-duration: 0.3s;
+        }
+    }
+
+    .copyright {
+        color: #969696;
+        font-size: 90%;
+        font-weight: bold;
+    }
+    
+    .copyright-link {
+        text-decoration: none !important;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: $custom-color;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .top-menu {
+        .navbar {
+            padding: 0px 20px !important;
+
+            .navbar-nav {
+                a {    
+                    border-bottom: none !important;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-top {  
+        .carousel {
+            .carousel-caption {
+                h1 {
+                    font-size: 30px;
+                }
+    
+                h4 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

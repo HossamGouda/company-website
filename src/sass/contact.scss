@@ -1,0 +1,24 @@
+.banner-contact {
+    #banner-img {
+        background-image: url(../images/banner-contact.jpg);
+    }
+}
+
+.contact-us {
+    #contact-info {
+        svg { 
+            color: $main-color;
+            margin-left: 5px;
+        }
+    }
+
+    input[type=email] {
+        text-align: right;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-header {
+        margin-top: 50px;
+    }
+}

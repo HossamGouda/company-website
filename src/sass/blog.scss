@@ -1,0 +1,93 @@
+.banner-blog {
+    #banner-img {
+        background-image: url(../images/banner-blog.jpg);
+    }
+}
+
+.posts {
+    .search-box {
+        padding: 15px;
+        margin-top: 5px;
+        box-shadow: 0px 1px 1px 1px $custom-color;
+        border: 1px solid $custom-color;
+    }
+
+    .card {
+        .card-body {
+            .card-text {
+                white-space: nowrap;/*منع النزول لسطر جديد والإكتفاء بسطر واحد*/
+                overflow: hidden;/*إخفاء جميع المعلومات بعد السطر الأول*/
+                text-overflow: ellipsis;/*إضافة النقط الثلاث في نهاية الجملة*/
+                color: $card-text-color;
+            }
+        }
+    }
+}
+
+.form-control {
+    &:focus {
+        border-color: $main-color !important;
+        box-shadow: none !important;
+    }  
+}
+
+.posts-details {
+    .card {
+        .card-body {
+            .card-text {
+                color: $card-text-color;
+            }
+
+            .card-title {
+                font-weight: 800;
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.one-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $card-text-color;
+    color: $card-text-color;
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+    margin-left: 10px;
+    float: left;
+}
+
+.facebook-social {
+    &:hover,
+    &:focus {
+        color: #FFF;
+        background-color: #3B5998;
+    }
+}
+
+.twitter-social {
+    &:hover,
+    &:focus {
+        color: #FFF;
+        background-color: #1da1f2;
+    }
+}
+
+.linkedin-social {
+    &:hover,
+    &:focus {
+        color: #FFF;
+        background-color: #0077b0;
+    }
+}
+
+.add-blog {
+    label {
+        &:first-child {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }  
+}
